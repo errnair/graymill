@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block head %}
+{{ super() }}
+<meta name="twitter:creator" content="{{ TWITTER_USERNAME }}">
+<meta name="twitter:url" content="{{ SITEURL }}/{{ article.url }}">
+<meta name="twitter:title" content="{{ SITENAME }} ~ {{ article.title }}">
+<meta name="twitter:description" content="{{ article.summary|striptags|escape }}">
+
+<!-- Facebook Meta Data -->
+<meta property="og:title" content="{{ SITENAME }} ~ {{ article.title }}" />
+<meta property="og:description" content="{{ article.summary|striptags|escape  }}" />
+<meta property="og:image" content="" />
+{% endblock head %}
+{% block title %}{{ article.title }}{% endblock %}
+{% block content %}
+<section id="content">
+    <article>
+        <h2 class="post_title post_detail"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title }}">{{ article.title }}</a></h2>
+        <div class="post_list">
+            <span>   <b>By:</b> </span>
+            <a href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a>
+            <span>, IN </span>
+            <span class="post_category"><a href="{{ SITEURL }}/{{ article.category.url }}" rel="bookmark" title="Permalink to {{ article.category|striptags }}">[ {{ article.category }} ]</a></span>
+            <div class="post_date"><b>Date:</b> {{ article.locale_date }}</div>
+            <div><span>   <b>Tags:</b> </span>
+                {% if article.tags %}
+                {% for tag in article.tags %}
+                <span><a href="{{ SITEURL }}/{{ tag.url }}">#{{ tag }} </a></span>
+                {% endfor %}
+                {% endif %}
+            </div>
+            <br \>
+            <div style="border-bottom: 1.5px solid #eee"></div>
+   	</div>
+        <div class="entry-content blog-post">
+            {{ article.content }}
+        </div>
+        <div style="border-bottom: 1.5px solid #eee"></div>
+        <div class="post_list">
+            <div class="entry-social">
+            <span><i>If you found the article helpful, please share or cite the article and spread the word.</i></span>
+            <p>
+                <span class="twitter"><a target="_blank" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;" title="Twitter" href="https://twitter.com/share?url={{ SITEURL }}/{{ article.url }}&text={{ article.title }}&via={{TWITTER_USERNAME}}"><img src="{{ SITEURL }}/theme/images/icons/twitter-s.png"></a></span>
+                <span class="facebook"><a target="_blank" title="Facebook" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;" href="https://www.facebook.com/sharer.php?u={{ SITEURL }}/{{article.url}}&t={{ article.title }}"><img src="{{ SITEURL }}/theme/images/icons/facebook-s.png"></a></span>
+
+                <a  target="_blank" title="Linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url={{ SITEURL }}/{{ article.url }}&title={{ article.title }}" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;"><img src="{{ SITEURL }}/theme/images/icons/linkedin-s.png"></a>
+            </p>
+            </div>
+        </div>
+        <div style="border-bottom: 1.5px solid #eee"></div>
+            <p><i>For any feedback or corrections, please write in to:</i></p>
+            <p><b>rahul</b> [at] <b>muchbits</b> [dot] <b>com</b></i></p>
+        
+       {% if DISQUS_SITENAME %}
+        <div class="comments">
+            <h2>Comments !</h2>
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+            var disqus_identifier = "{{ article.url }}";
+            (function() {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'https://{{ DISQUS_SITENAME }}.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] ||
+                 document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+            </script>
+        </div>
+        {% endif %}
+    </article>
+</section>
+{% endblock %}
