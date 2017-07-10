@@ -51,29 +51,33 @@
                     {% endif  %}
                 </li>
             </div>
-            <div class="float-right">
-                {% for title, link in MENUITEMS %}
-                    <li><a href="{{ link }}"><h4>{{ title }}</h4></a></li>
-                {% endfor %}
-
-                {% if DISPLAY_PAGES_ON_MENU and PAGES %}
-                    {% for p in pages %}
-                        <li><a href="{{ SITEURL }}/{{ p.url }}"><h4>{{ p.title }}</h4></a></li>
-                    {% endfor %}
-                {% endif %}
-            </div>
         </ul>
       </div>
 
   <!-- Sidebar -->
     <sidebar>
+        <ul class="static-item">
+        {% for title, link in MENUITEMS %}
+                <li><a href="{{ link }}">{{ title }}</a></li>
+        {% endfor %}
+
+        {% if DISPLAY_PAGES_ON_MENU and PAGES %}
+            {% for p in pages %}
+                <li><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+            {% endfor %}
+        {% endif %}
+        </ul>        
+
+        <ul>
         {% if DISPLAY_CATEGORIES_ON_MENU and categories %}
-            <ul>
+                <div class="cat-border">
+                <li style="color: #F2F1EF; background-color: #6C7A89;">Categories</li>
                 {% for cat, null in categories %}
                     <li{% if cat == category %}{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
                 {% endfor %}
-            </ul>
+                </div>
         {% endif %}
+        </ul>
 
         {% if LINKS %}
             <h2><br/>BLOGROLLS</h2>
@@ -83,6 +87,7 @@
                 {% endfor %}
             </ul> 
         {% endif %}
+        
     </sidebar>
     
     <maincontent>

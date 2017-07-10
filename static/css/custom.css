@@ -18,23 +18,39 @@ a {
     overflow: hidden;
 }
 
+/*
 .navbar li {
     margin-bottom: 0;
     float: left;
+}
+*/
+.navbar li {
+    margin: 1em;
+    float: left;
+    line-height: 0.1em;
+    padding: 1em;
 }
 
 .navbar li a {
     display: block;
     color: #6C7A89;
     text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
 }
 
+/*
+.navbar li a:focus,
 .navbar li a:hover {
-    color: #ffffff;
+    color: #F2F1EF;
     background-color: #6C7A89;
+    border-radius: 10%;
 }
+*/
+
+.navbar li h4 {
+    margin: 5%;
+}
+
 
 .navbar li i {
     display: block;
@@ -47,14 +63,13 @@ a {
 }
 
 sidebar {
-  font-size: 14px;
+  font-size: 1.5em;
   width: 15%; 
   height: 100%;
   position: fixed;
   right: 0;
-  padding: 30px;
+  padding: 2%;
   text-align: center;
-  padding-top: 15%;
   background-size: cover;
 }
 
@@ -63,6 +78,34 @@ sidebar > ul {
   padding: 0px 10px;
   margin-top: 0px;
 }
+
+.static-item {
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+
+.cat-border {
+  border: 2px solid #6C7A89;
+  text-transform: uppercase;
+}
+
+.cat-border a:focus,
+.cat-border a:hover {
+  color: #F2F1EF;
+  background-color: #6C7A89;
+  padding: 1%;
+  border-radius: 10%;
+}
+
+sidebar > ul > li > a:hover,
+sidebar > ul > li > a:focus {
+  color: #F2F1EF;
+  background-color: #6C7A89;
+  padding: 1%;
+  border-radius: 10%;
+
+}
+
 sidebar > h2 {
   font-size: 15px;
   margin-bottom: 5px;
