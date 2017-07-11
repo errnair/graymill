@@ -1,5 +1,5 @@
 body {
-    background-color: #F2F1EF; 
+    background-color: #ECF0F1;
 }
 
 a {
@@ -125,6 +125,10 @@ maincontent > ol {
 .page-title {
   border-bottom: 1.5px solid #eee;
   width: 85%;
+}
+
+hr {
+  border-top: 0.1rem solid #6C7A89;
 }
 
 @media (max-width: 800px) {
