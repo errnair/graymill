@@ -1,40 +1,39 @@
 {% extends "base.html" %}
 {% block head %}
 {{ super() }}
-<meta name="twitter:creator" content="{{ TWITTER_USERNAME }}">
-<meta name="twitter:url" content="{{ SITEURL }}">
-<meta name="twitter:title" content="{{ SITENAME }}">
-<meta name="twitter:description" content="{{ SITEDESCRIPTION }}">
+  <meta name="twitter:creator" content="{{ TWITTER_USERNAME }}">
+  <meta name="twitter:url" content="{{ SITEURL }}">
+  <meta name="twitter:title" content="{{ SITENAME }}">
+  <meta name="twitter:description" content="{{ SITEDESCRIPTION }}">
 
-<!-- Facebook Meta Data -->
-<meta property="og:title" content="{{ SITENAME }}" />
-<meta property="og:description" content="{{ SITEDESCRIPTION }}" />
-<meta property="og:image" content="" />
+  <!-- Facebook Meta Data -->
+  <meta property="og:title" content="{{ SITENAME }}" />
+  <meta property="og:description" content="{{ SITEDESCRIPTION }}" />
+  <meta property="og:image" content="" />
 {% endblock head %}
 {% block content_title %}{% endblock %}
 {% block content %}
 
 {% if articles %}
-<ol>
-    {% block heading %}<h4>Recent entries</h4>{% endblock %}
+    <ol>
+    {% block heading %}
+        <h4>Recent entries</h4>
+    {% endblock %}
     {% for article in (articles_page.object_list if articles_page else articles) %}
-    <li><p>
-        <h6><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h6>
-                {% if DISPLAY_SUMMARY and article.summary|length > 0 %}
-                        <p><i>{{ article.summary }}</i></p>
-                {% endif %}
-        <a href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a>
-        <span> in </span>
-        <span><a href="{{ SITEURL }}/{{ article.category.url }}" rel="bookmark" title="Permalink to {{ article.category|striptags }}">[ {{ article.category }} ]</a></span>
-        <span>{{ article.locale_date }}</span>
-    </li>
-    <hr>
+        <li>
+            <p><h5><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h5></p>
+            {% if DISPLAY_SUMMARY and article.summary|length > 0 %}
+            <p><i>{{ article.summary }}</i></p>
+            {% endif %}
+            <p>By:<a href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a><br />On:{{ article.locale_date }}<br />In:<a href="{{ SITEURL }}/{{ article.category.url }}" rel="bookmark" title="Permalink to {{ article.category|striptags }}">{{ article.category }}</a></p>
+        </li>
+        <hr>
     {% endfor %}
-</ol>
+    </ol>
 {% endif %}
 
 {% if articles_page and articles_paginator.num_pages > 1 %}
-{% include 'pagination.html' %}
+    {% include 'pagination.html' %}
 {% endif %}
 
 {% endblock content %}

@@ -1,5 +1,5 @@
 body {
-    background-color: #ECF0F1;
+    background-color: #ffffff;
 }
 
 a {
@@ -8,7 +8,7 @@ a {
 }
 
 .navbar {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .navbar ul {
@@ -38,20 +38,13 @@ a {
     text-decoration: none;
 }
 
-/*
-.navbar li a:focus,
-.navbar li a:hover {
-    color: #F2F1EF;
-    background-color: #6C7A89;
-    border-radius: 10%;
-}
-*/
-
 .navbar li h4 {
     margin: 5%;
 }
 
-
+.navbar li h6 {
+    line-height: 2.5;
+}
 .navbar li i {
     display: block;
     text-align: center;
@@ -63,72 +56,75 @@ a {
 }
 
 sidebar {
-  font-size: 1.5em;
-  width: 15%; 
-  height: 100%;
-  position: fixed;
-  right: 0;
-  padding: 2%;
-  text-align: center;
-  background-size: cover;
+    font-size: 1.5em;
+    width: 15%; 
+    height: 100%;
+    position: fixed;
+    right: 0;
+    padding: 2%;
+    text-align: center;
+    background-size: cover;
 }
 
 sidebar > ul {
-  list-style-type: none;
-  padding: 0px 10px;
-  margin-top: 0px;
+    list-style-type: none;
+    padding: 0px 10px;
+    margin-top: 0px;
 }
 
 .static-item {
-  text-transform: uppercase;
-  font-size: 1.5em;
+    text-transform: uppercase;
+    font-size: 1.5em;
 }
 
 .cat-border {
-  border: 2px solid #6C7A89;
-  text-transform: uppercase;
+    border: 2px solid #6C7A89;
+    text-transform: uppercase;
 }
 
 .cat-border a:focus,
 .cat-border a:hover {
-  color: #F2F1EF;
-  background-color: #6C7A89;
-  padding: 1%;
-  border-radius: 10%;
+    color: #F2F1EF;
+    background-color: #6C7A89;
+    padding: 1%;
+    border-radius: 10%;
 }
 
 sidebar > ul > li > a:hover,
 sidebar > ul > li > a:focus {
-  color: #F2F1EF;
-  background-color: #6C7A89;
-  padding: 1%;
-  border-radius: 10%;
-
+    color: #F2F1EF;
+    background-color: #6C7A89;
+    padding: 1%;
+    border-radius: 10%;
 }
 
 sidebar > h2 {
-  font-size: 15px;
-  margin-bottom: 5px;
-  padding-bottom: 3%;
+    font-size: 15px;
+    margin-bottom: 5px;
+    padding-bottom: 3%;
 }
 
 maincontent {
-  display: block;
-  line-height: 1.6em;
-  width: 85%;
+    display: block;
+    line-height: 1.6em;
+    width: 85%;
 }
 
 maincontent > ol {
-  list-style-type: none;
+    list-style-type: none;
 }
 
 .page-title {
-  border-bottom: 1.5px solid #eee;
-  width: 85%;
+    border-bottom: 1.5px solid #eee;
+    width: 85%;
 }
 
 hr {
-  border-top: 0.1rem solid #6C7A89;
+    border-top: 0.1rem solid #6C7A89;
+}
+
+pre {
+    padding-left: 1%;
 }
 
 @media (max-width: 800px) {
