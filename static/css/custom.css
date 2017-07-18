@@ -124,7 +124,8 @@ hr {
 }
 
 pre {
-    padding-left: 1%;
+    padding-left: 1.5%;
+    border-left: 0.3rem solid #6C7A89;
 }
 
 @media (max-width: 40.0rem) {
@@ -164,6 +165,11 @@ pre {
   maincontent h5 {
     font-size: 1.4rem;
   }
+
+  maincontent article h2 {
+    font-size: 2.6rem;
+  }
+
 }
 
 /*
