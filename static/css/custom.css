@@ -127,6 +127,42 @@ pre {
     padding-left: 1%;
 }
 
+@media (max-width: 40.0rem) {
+  .navbar
+  {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .navbar li{
+    float: none;
+    padding: initial;
+    text-align: center
+  }
+  
+  .navbar li h6 {
+    line-height: initial;
+    font-size: 0.75em;
+    letter-spacing: 0;
+  }
+
+  sidebar {
+    right: 0;
+    max-width: none;
+    position: fixed;
+    width: 25%;
+    padding: 0;
+    padding-top: 1px;
+    font-size: 8px;
+  }
+
+  maincontent {
+    width: 75%;
+    font-size: 10px;
+  }        
+}
+
+/*
 @media (max-width: 800px) {
 
   .navbar
@@ -150,3 +186,4 @@ pre {
     font-size: 10px;
   }
 }
+*/
