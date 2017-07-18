@@ -120,7 +120,7 @@ maincontent > ol {
 }
 
 hr {
-    border-top: 0.1rem solid #6C7A89;
+    border-top: 0.3rem double #6C7A89;
 }
 
 pre {
@@ -159,7 +159,11 @@ pre {
   maincontent {
     width: 75%;
     font-size: 10px;
-  }        
+  }
+
+  maincontent h5 {
+    font-size: 1.4rem;
+  }
 }
 
 /*
