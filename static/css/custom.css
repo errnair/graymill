@@ -1,5 +1,6 @@
 body {
     background-color: #ffffff;
+    font-size: 1.5rem;
 }
 
 a {
@@ -87,7 +88,6 @@ sidebar > ul {
     color: #F2F1EF;
     background-color: #6C7A89;
     padding: 1%;
-    border-radius: 10%;
 }
 
 sidebar > ul > li > a:hover,
@@ -95,7 +95,6 @@ sidebar > ul > li > a:focus {
     color: #F2F1EF;
     background-color: #6C7A89;
     padding: 1%;
-    border-radius: 10%;
 }
 
 sidebar > h2 {
