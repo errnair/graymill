@@ -132,6 +132,14 @@ code {
     font-style: italic;
 }
 
+.social-icons-a {
+    max-width: 3%;
+}
+
+.social-icons-m {
+    max-width: 20%;
+}
+
 @media (max-width: 40.0rem) {
   .navbar
   {

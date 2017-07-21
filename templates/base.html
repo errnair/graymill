@@ -87,6 +87,30 @@
                 {% endfor %}
             </ul> 
         {% endif %}
+   
+        <p> 
+        {% if SOCIAL %}
+            {% for name, link in SOCIAL %}
+                <span>
+                    <a href="{{ link }}" target="_blank">
+                        <img class="social-icons-m" src="{{ SITEURL }}/theme/images/icons/{{ name|lower }}.png">
+                    </a>
+                </span>
+            {% endfor %}
+        {% endif %}
+        </p>
+        <p>
+        {% if FEED_ALL_ATOM %}
+            <a href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}" rel="alternate">
+                <img class="social-icons-m" src="{{ SITEURL }}/theme/images/icons/rss.png"></a>
+        {% endif %}
+        </p>
+        <p>
+        {% if FEED_ALL_RSS %}
+            <a href="{{ SITEURL }}/{{ FEED_ALL_RSS }}" rel="alternate">
+                <img class="social-icons-m" src="{{ SITEURL }}/theme/images/icons/rss.png"></a>
+        {% endif %}
+        </p>
     </sidebar>
     
     <maincontent>
