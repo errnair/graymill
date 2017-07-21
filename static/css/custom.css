@@ -127,6 +127,11 @@ pre {
     border-left: 0.3rem solid #6C7A89;
 }
 
+code {
+    font-size: 100%;
+    font-style: italic;
+}
+
 @media (max-width: 40.0rem) {
   .navbar
   {
