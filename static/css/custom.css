@@ -113,6 +113,23 @@ maincontent > ol {
     list-style-type: none;
 }
 
+mainarticle ul {
+    list-style: square inside;
+}
+
+mainarticle ul li p {
+    padding-left: 3%;
+    margin-top: -2.5%;
+    font-size: 1.5em;
+}
+
+mainarticle a {
+    background: #f4f5f6;
+    font-weight: bold;
+    font-style: italic;
+}
+
+
 .page-title {
     border-bottom: 1.5px solid #eee;
     width: 85%;
@@ -130,6 +147,10 @@ pre {
 code {
     font-size: 100%;
     font-style: italic;
+}
+
+ul {
+   list-style: square inside;
 }
 
 .social-icons-a {
@@ -181,7 +202,11 @@ code {
   maincontent article h2 {
     font-size: 2.6rem;
   }
-
+    
+  mainarticle ul li p {
+    padding-left: 5%;
+    margin-top: -6%;
+  }
 }
 
 /*
