@@ -119,7 +119,7 @@ mainarticle ul {
 
 mainarticle ul li p {
     padding-left: 3%;
-    margin-top: -2.5%;
+    margin-top: -2%;
     font-size: 1.5em;
 }
 
@@ -167,13 +167,13 @@ ul {
 }
 
 @media (max-width: 40.0rem) {
-  .navbar
-  {
+
+  .navbar {
     margin-left: 0;
     margin-right: 0;
   }
 
-  .navbar li{
+  .navbar li {
     float: none;
     padding: initial;
     text-align: center
@@ -200,42 +200,67 @@ ul {
     font-size: 10px;
   }
 
-  maincontent h5 {
-    font-size: 1.4rem;
+  maincontent h2 {
+    font-size: 2rem;
   }
 
-  maincontent article h2 {
-    font-size: 2.6rem;
+  maincontent h5 {
+    font-size: 1.4rem;
   }
     
   mainarticle ul li p {
     padding-left: 5%;
     margin-top: -6%;
   }
+
+  .social-icons-a {
+    max-width: 10%;
+  }
 }
 
-/*
-@media (max-width: 800px) {
-
-  .navbar
-  {
+@media (min-width: 41.0rem) and (max-width: 80.0rem){
+  .navbar {
     margin-left: 0;
     margin-right: 0;
+  }
+
+  .navbar li {
+    float: none;
+    padding: initial;
+    text-align: center
+  }
+
+  .navbar li h6 {
+    line-height: initial;
+    font-size: 0.75em;
+    letter-spacing: 0;
   }
 
   sidebar {
     right: 0;
     max-width: none;
     position: fixed;
-    width: 25%;
+    width: 15%;
     padding: 0;
     padding-top: 1px;
-    font-size: 10px;
+    font-size: 8px;
   }
 
   maincontent {
-    width: 75%;
+    width: 85%;
     font-size: 10px;
   }
+
+  maincontent h2 {
+    font-size: 2rem;
+  }
+
+  maincontent h5 {
+    font-size: 1.4rem;
+  }
+
+  mainarticle ul li p {
+    padding-left: 5%;
+    margin-top: -2%;
+  }
 }
-*/
