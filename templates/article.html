@@ -47,7 +47,10 @@
             </p>
 </div>
 <hr>
-            
-<p><i>For any feedback or corrections, please write in to: </i><b>rahul</b> [at] <b>muchbits</b> [dot] <b>com</b></p>
+{% if AUTHOREMAIL %}
+    <p><i>For any feedback or corrections, please write in to: </i><b> {{ AUTHOREMAIL }} </b></p>
+{% else  %}
+    <p><i>For any feedback or corrections, please write in to: </i><b> {{ AUTHOR }} </b></p>
+{% endif %}
         
 {% endblock %}
