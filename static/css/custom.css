@@ -19,12 +19,6 @@ a {
     overflow: hidden;
 }
 
-/*
-.navbar li {
-    margin-bottom: 0;
-    float: left;
-}
-*/
 .navbar li {
     margin: 1em;
     float: left;
@@ -129,6 +123,18 @@ mainarticle a {
     font-style: italic;
 }
 
+maincontent table {
+    max-width: 100%;
+    width: 0;
+}
+
+maincontent table tbody tr td pre {
+    padding-right: 20px;
+}
+
+maincontent table tbody tr td .highlight {
+    width: 90rem;
+}
 
 .page-title {
     border-bottom: 1.5px solid #eee;
