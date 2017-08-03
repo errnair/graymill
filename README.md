@@ -6,21 +6,20 @@ Graymin is a minimal, responsive theme for the [Pelican](http://blog.getpelican.
 
 See the theme in action at [muchBits](https://muchbits.com)
 
-### Screenshots
-
-*Coming Soon*
-
 ### Features
 
-* Responsive (Mobile Friendly Test on [Google](https://search.google.com/test/mobile-friendly?utm_source=mft&utm_medium=redirect&utm_campaign=mft-redirect&id=TT7gCU77TVUWMMbu4pmHsg))
 * Syntax highlighting for code blocks
-* Google Analytics Support
 * Easy to install
 * Minimal/No Javascript (JS is only used in case Google Analytics is enabled).
+* Google Analytics Support
+* Responsive (Mobile Friendly Test on [Google](https://search.google.com/test/mobile-friendly?utm_source=mft&utm_medium=redirect&utm_campaign=mft-redirect&id=TT7gCU77TVUWMMbu4pmHsg))
 
 ## Installation
 
-* Clone the repository - `git clone https://github.com/rn4ir/graymin.git`
+* Clone the repository:
+```python
+git clone https://github.com/rn4ir/graymin.git
+```
 * Create a `THEME` variable in your `pelicanconf.py` file and set its value to the location of ***graymin*** theme, like so:
 ```python
 THEME = 'path/to/graymin'
@@ -28,6 +27,8 @@ THEME = 'path/to/graymin'
 
 ## Custom Variables
 
+(*Please refer to the sample pelicanconf.py contained in this repo for examples*)  
+  
 The ***Graymin*** theme use the following settings in the `pelicanconf.py`:
 
 ### pelicanconf.py
