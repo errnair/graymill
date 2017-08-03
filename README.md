@@ -49,7 +49,7 @@ DEFAULT_PAGINATION = 8
 #### Home page parameters:
 
 ```python
-SITEDESCRIPTION = 'snippets, how-tos and other tidbits'
+SITEDESCRIPTION = 'your-site's-tagline'
 DISPLAY_SUMMARY = True
 DISPLAY_PAGES_ON_MENU = True
 ```
@@ -81,4 +81,4 @@ CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
 GOOGLE_ANALYTICS = ""
 ```
 
-For more information on publishing your site, read the publishing [docs](http://docs.getpelican.com/en/3.6.3/publish.html)
+For more information on publishing your site, please read the [Pelican publishing docs](http://docs.getpelican.com/en/3.6.3/publish.html)
