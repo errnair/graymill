@@ -172,6 +172,14 @@ ul {
     margin-top: 2%;
 }
 
+.static-page-urls a{
+    background: #f4f5f6; 
+    font-weight: bold; 
+    font-style: italic; 
+    color: #6C7A89; 
+    text-decoration: none;
+}
+
 @media (max-width: 40.0rem) {
 
   .navbar {
