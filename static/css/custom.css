@@ -51,7 +51,8 @@ a {
 }
 
 sidebar {
-    font-size: 1.25em;
+    font-size: 1.25rem;
+    font-weight: bold;
     width: 15%; 
     height: 100%;
     position: fixed;
@@ -69,7 +70,8 @@ sidebar > ul {
 
 .static-item {
     text-transform: uppercase;
-    font-size: 1.5em;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 .cat-border {
