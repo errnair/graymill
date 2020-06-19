@@ -21,7 +21,6 @@ a {
 
 .navbar li {
     margin: 1em;
-    float: left;
     line-height: 0.1em;
     padding: 1em;
 }
@@ -31,6 +30,10 @@ a {
     color: #6C7A89;
     text-align: center;
     text-decoration: none;
+}
+
+.navbar li h5 {
+    text-align: center;
 }
 
 .navbar li h4 {
