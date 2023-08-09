@@ -57,7 +57,7 @@
   <!-- Sidebar -->
     <sidebar>
        <!-- Content showing social links -->
-        <p> 
+        <p>
         {% if SOCIAL %}
             {% for name, link in SOCIAL %}
                 <span>
@@ -93,7 +93,7 @@
                 <li><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
             {% endfor %}
         {% endif %}
-        </ul>        
+        </ul>
 
         <ul>
         {% if DISPLAY_CATEGORIES_ON_MENU and categories %}
@@ -112,11 +112,11 @@
                 {% for name, link in LINKS %}
                     <li><a href="{{ link }}">{{ name }}</a></li>
                 {% endfor %}
-            </ul> 
+            </ul>
         {% endif %}
-   
+
     </sidebar>
-    
+
     <maincontent>
         {% block content %}
         {% endblock %}
@@ -124,16 +124,14 @@
 
   <!-- Analytics -->
   {% if GOOGLE_ANALYTICS %}
-    <script type="text/javascript">
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', '{{ GOOGLE_ANALYTICS }}']);
-        _gaq.push(['_trackPageview']);
-        (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-    </script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id={{ GOOGLE_ANALYTICS }}"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', '{{ GOOGLE_ANALYTICS }}');
+        </script>
   {% endif %}
 
   </div>
