@@ -21,7 +21,6 @@ a {
 
 .navbar li {
     margin: 1em;
-    float: left;
     line-height: 0.1em;
     padding: 1em;
 }
@@ -31,6 +30,10 @@ a {
     color: #6C7A89;
     text-align: center;
     text-decoration: none;
+}
+
+.navbar li h5 {
+    text-align: center;
 }
 
 .navbar li h4 {
@@ -116,7 +119,7 @@ mainarticle ul {
 mainarticle ul li p {
     padding-left: 3%;
     margin-top: -2%;
-    font-size: 1.5em;
+    font-size: 12px;
 }
 
 mainarticle a {
@@ -213,11 +216,15 @@ ul {
 
   maincontent {
     width: 75%;
-    font-size: 10px;
+    font-size: 12px;
   }
 
   maincontent h2 {
     font-size: 2rem;
+  }
+
+  maincontent h3 {
+    font-size: 1.7rem;
   }
 
   maincontent h5 {
@@ -264,11 +271,15 @@ ul {
 
   maincontent {
     width: 85%;
-    font-size: 10px;
+    font-size: 12px;
   }
 
   maincontent h2 {
     font-size: 2rem;
+  }
+
+  maincontent h3 {
+    font-size: 1.7rem;
   }
 
   maincontent h5 {
@@ -280,3 +291,5 @@ ul {
     margin-top: -2%;
   }
 }
+
+
