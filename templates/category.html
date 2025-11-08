@@ -6,10 +6,7 @@
     {% endif %}
     <meta name="twitter:url" content="{{ SITEURL }}/{{ category.url }}">
     <meta name="twitter:title" content="{{ SITENAME }} || {{ category }}">
-    <meta name="twitter:description" content="Articles in {{ category }}">
-
-    <!-- Category-specific feed -->
-    {% if CATEGORY_FEED_ATOM %}
+    <meta name="twitter:description" content="Articles in {{ category }}">{% if CATEGORY_FEED_ATOM %}
     <link href="{{ SITEURL }}/{{ CATEGORY_FEED_ATOM|format(slug=category.slug) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} - {{ category }} Category Feed" />
     {% endif %}
 

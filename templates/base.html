@@ -7,14 +7,8 @@
   <title>{% block title %} {{ SITENAME }} {% endblock %}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="{{ AUTHOR_DESCRIPTION|default('') }}">
-  <meta name="author" content="{{ AUTHOR }}">
-
-  <!-- 2025 Performance & Security Meta Tags -->
-  <meta name="referrer" content="strict-origin-when-cross-origin">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-  <!-- Theme Color for Browser Chrome (supports dark mode) -->
-  <meta name="theme-color" content="#6C7A89" media="(prefers-color-scheme: light)">
+  <meta name="author" content="{{ AUTHOR }}"><meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="theme-color" content="#6C7A89" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#8b9dc3" media="(prefers-color-scheme: dark)">
 
   {% if FAVICON %}
@@ -52,46 +46,25 @@
   {% endblock %}
 </head>
 
-<body>
-    <!-- Skip Link for Accessibility -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-
-    <!-- Top Navigation Bar -->
-    <header class="top-nav">
-        <div class="nav-container">
-            <!-- Site Branding -->
-            <div class="site-branding">
+<body><a href="#main-content" class="skip-link">Skip to main content</a><header class="top-nav">
+        <div class="nav-container"><div class="site-branding">
                 <a href="{{ SITEURL }}" class="site-title">{{ SITENAME }}</a>
                 {% if SITEDESCRIPTION %}
                 <p class="site-description">{{ SITEDESCRIPTION }}</p>
                 {% endif %}
-            </div>
-
-            <!-- Mobile Menu Toggle -->
-            <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+            </div><input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
             <label for="nav-toggle" class="nav-toggle-label">
                 <span></span>
                 <span></span>
                 <span></span>
-            </label>
-
-            <!-- Main Navigation -->
-            <nav class="main-nav">
-                <ul class="nav-menu">
-                    <!-- Menu Items -->
-                    {% for title, link in MENUITEMS %}
+            </label><nav class="main-nav">
+                <ul class="nav-menu">{% for title, link in MENUITEMS %}
                     <li class="nav-item"><a href="{{ link }}" class="nav-link">{{ title }}</a></li>
-                    {% endfor %}
-
-                    <!-- Pages -->
-                    {% if DISPLAY_PAGES_ON_MENU and pages %}
+                    {% endfor %}{% if DISPLAY_PAGES_ON_MENU and pages %}
                         {% for p in pages %}
                         <li class="nav-item"><a href="{{ SITEURL }}/{{ p.url }}" class="nav-link">{{ p.title }}</a></li>
                         {% endfor %}
-                    {% endif %}
-
-                    <!-- Categories Dropdown -->
-                    {% if DISPLAY_CATEGORIES_ON_MENU and categories %}
+                    {% endif %}{% if DISPLAY_CATEGORIES_ON_MENU and categories %}
                     <li class="nav-item nav-dropdown">
                         <a href="{{ SITEURL }}/categories.html" class="nav-link">Categories</a>
                         <ul class="dropdown-menu">
@@ -100,28 +73,17 @@
                             {% endfor %}
                         </ul>
                     </li>
-                    {% endif %}
-
-                    <!-- Tags Link -->
-                    <li class="nav-item"><a href="{{ SITEURL }}/tags.html" class="nav-link">Tags</a></li>
+                    {% endif %}<li class="nav-item"><a href="{{ SITEURL }}/tags.html" class="nav-link">Tags</a></li>
                 </ul>
             </nav>
         </div>
-    </header>
-
-    <!-- Main Content Area -->
-    <div class="site-content">
+    </header><div class="site-content">
         <main id="main-content" class="main-content">
             {% block content %}
             {% endblock %}
         </main>
-    </div>
-
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div class="footer-content">
-            <!-- Blogroll -->
-            {% if LINKS %}
+    </div><footer class="site-footer">
+        <div class="footer-content">{% if LINKS %}
             <div class="footer-section">
                 <h3>Blogroll</h3>
                 <ul class="footer-links">
@@ -130,10 +92,7 @@
                     {% endfor %}
                 </ul>
             </div>
-            {% endif %}
-
-            <!-- Social Links -->
-            {% if SOCIAL %}
+            {% endif %}{% if SOCIAL %}
             <div class="footer-section">
                 <h3>Connect</h3>
                 <div class="social-links">
@@ -141,10 +100,7 @@
                     <a href="{{ link }}" target="_blank" rel="noopener noreferrer" aria-label="{{ name }}">
                         <img class="social-icon" src="{{ SITEURL }}/theme/images/icons-svg/{{ name|lower }}.svg" alt="{{ name }}" loading="lazy" decoding="async">
                     </a>
-                    {% endfor %}
-
-                    <!-- RSS Feeds -->
-                    {% if FEED_ALL_ATOM %}
+                    {% endfor %}{% if FEED_ALL_ATOM %}
                     <a href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}" rel="alternate" aria-label="RSS Feed (Atom)">
                         <img class="social-icon" src="{{ SITEURL }}/theme/images/icons-svg/rss.svg" alt="RSS Feed" loading="lazy" decoding="async">
                     </a>

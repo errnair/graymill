@@ -6,10 +6,7 @@
     {% endif %}
     <meta name="twitter:url" content="{{ SITEURL }}/{{ author.url }}">
     <meta name="twitter:title" content="{{ SITENAME }} ~ {{ author }}">
-    <meta name="twitter:description" content="All articles by {{ author }}">
-
-    <!-- Author-specific feed -->
-    {% if AUTHOR_FEED_ATOM %}
+    <meta name="twitter:description" content="All articles by {{ author }}">{% if AUTHOR_FEED_ATOM %}
     <link href="{{ SITEURL }}/{{ AUTHOR_FEED_ATOM|format(slug=author.slug) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} - {{ author }} Author Feed" />
     {% endif %}
 

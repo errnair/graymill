@@ -6,10 +6,7 @@
     {% endif %}
     <meta name="twitter:url" content="{{ SITEURL }}/{{ tag.url }}">
     <meta name="twitter:title" content="{{ SITENAME }} || {{ tag }}">
-    <meta name="twitter:description" content="Articles with the tag '{{ tag }}'">
-
-    <!-- Tag-specific feed -->
-    {% if TAG_FEED_ATOM %}
+    <meta name="twitter:description" content="Articles with the tag '{{ tag }}'">{% if TAG_FEED_ATOM %}
     <link href="{{ SITEURL }}/{{ TAG_FEED_ATOM|format(slug=tag.slug) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} - {{ tag }} Tag Feed" />
     {% endif %}
 
