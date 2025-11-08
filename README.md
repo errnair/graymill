@@ -23,7 +23,7 @@ Version 2.1.0 | Pelican 4.0+ | MIT License
 Clone the repository:
 
 ```bash
-git clone https://github.com/rn4ir/graymill.git
+git clone https://github.com/errnair/graymill.git
 ```
 
 Or use pelican-themes:
@@ -288,8 +288,8 @@ Copyright (c) 2025 Rahul Nair
 ## Links
 
 - Demo: [muchBits](https://muchbits.com)
-- Repository: [github.com/rn4ir/graymill](https://github.com/rn4ir/graymill)
-- Issues: [github.com/rn4ir/graymill/issues](https://github.com/rn4ir/graymill/issues)
+- Repository: [github.com/errnair/graymill](https://github.com/errnair/graymill)
+- Issues: [github.com/errnair/graymill/issues](https://github.com/errnair/graymill/issues)
 
 ## Notes
 
