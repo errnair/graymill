@@ -245,7 +245,6 @@ graymill/
 
 ### v2.1.0 (January 2025)
 
-New:
 - Modern top navigation with sticky positioning
 - CSS-only hamburger menu for mobile
 - Dropdown categories menu
@@ -255,12 +254,10 @@ New:
 - Draft mode with visual indicators
 - JSON-LD structured data
 - Mandatory Pelican templates (authors.html, period_archives.html)
-
-Fixed:
-- HTML validation errors (unclosed tags, MIME types)
-- Canonical URL implementation
-- Mobile navbar height issues
-- Undefined variable handling
+- HTML validation errors fixed (unclosed tags, MIME types)
+- Canonical URL implementation fixed
+- Mobile navbar height issues fixed
+- Undefined variable handling fixed
 
 ### v2.0.0 (January 2025)
 
@@ -294,19 +291,14 @@ Copyright (c) 2025 Rahul Nair
 - Repository: [github.com/rn4ir/graymill](https://github.com/rn4ir/graymill)
 - Issues: [github.com/rn4ir/graymill/issues](https://github.com/rn4ir/graymill/issues)
 
-## FAQ
+## Notes
 
-**Q: Does this work with Pelican 3.x?**
-A: No, you need Pelican 4.0+. Use Graymill v1.0 for Pelican 3.x.
+Pelican 4.0+ required. For Pelican 3.x, use Graymill v1.0.
 
-**Q: Can I use this commercially?**
-A: Yes, MIT license allows commercial use.
+MIT licensed - commercial use allowed.
 
-**Q: Where are the social icons?**
-A: In the footer. Make sure your SOCIAL config uses lowercase names matching the SVG files.
+Social icons appear in the footer. Icon names in SOCIAL config must be lowercase and match SVG filenames.
 
-**Q: How do I add custom fonts?**
-A: Add them via custom CSS (see Customization section above).
+For custom fonts, add them via custom CSS (see Customization section).
 
-**Q: Can I disable dark mode?**
-A: Dark mode is automatic based on system preference. Users can override it in their browser/OS settings.
+Dark mode activates automatically based on system preference. Users control this in their browser/OS settings.
